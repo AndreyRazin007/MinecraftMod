@@ -1,7 +1,9 @@
 package com.aeresilf.dop193;
 
 import com.aeresilf.dop193.block.ModBlocks;
+import com.aeresilf.dop193.block.MyBlocks;
 import com.aeresilf.dop193.item.ModItems;
+import com.aeresilf.dop193.item.MyItem;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -31,6 +33,8 @@ public class dop193
 
         ModItems.register(modEventBus); //----------------------------------------------
         ModBlocks.register(modEventBus);
+        MyItem.register(modEventBus);
+        MyBlocks.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -51,6 +55,14 @@ public class dop193
 
         if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.BLACK_OPAL_BLOCK);
+        }
+
+        if (event.getTab() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(MyItem.ABSTRACTION);
+        }
+
+        if (event.getTab() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(MyBlocks.ABSTARCTIONBLOCK);
         }
     }
 

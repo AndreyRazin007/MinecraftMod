@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:blocks/cube_all",
+  "textures":
+  {
+    "all": "dop193:block/abstraction_block"
+  }
+}
