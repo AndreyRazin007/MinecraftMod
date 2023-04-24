@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dop193:black_opal_ore",
+    "dop193:black_opal_block",
+    "dop193:deepslate_black_opal_ore",
+    "dop193:netherrack_black_opal_ore",
+    "dop193:endstone_black_opal_ore"
+  ]
+}
